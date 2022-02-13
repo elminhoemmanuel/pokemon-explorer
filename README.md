@@ -28,7 +28,7 @@ Some noteworthy information about the key decisions I took during this project a
 - I decided to disable the back button of the pagination ( i.e make it unclickable ) when the user is on the first page of the pokemon list as there is no previous page at that point. Also implemented a similar logic for the next button to ensure it is disabled when the user is on the very last page as there is no next page at that point.
 - I used TailwindCSS for styling as I needed to be able to quickly style my elements so as to help me apply stylings quickly while still in the jsx file as I had a time limit for the task. Also I used TailwindCSS because I saw it recommended in prepend's engineering wiki and it's a CSS framework I have come to love myself and use a lot.
 - I decided not to carryout un type definitions such as when using the useState hook to define items with simple types like boolean, string and number as TypeScript alrready infers that implicitly. This was done so as to also ensure the code is clean and that i stick to DRY ( Do Not Repeat Yourself ) coding principle.
-- I named this branch following the convention found in the engineering wiki , starting with the feature number 1 being the first feature followed by a short explanation of the feature.
+- I named this branch following the convention found in the engineering wiki , starting with the feature number 1 being the first feature followed by a short explanation of the feature. The prefix `feat/` at the start of the branch name indicates this branch holds a feature and not a fix or bug which would be `fix/` or `bug/` respectively.
 
 <!-- Improvements -->
 ## Further improvements if I had more time

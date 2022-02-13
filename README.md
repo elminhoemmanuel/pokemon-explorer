@@ -40,6 +40,7 @@ Some further improvements I would have made to this project if I had more than t
 - With more time I would have written more test cases. Currently I only wrote a single test case just to show my ability to do so. I do like to write a good number of tests as much as is required in my applications to ensure that there are no failing parts, but I was enable to do so on this project due to the time limit as I had been delayed by some other aspects.
 - With more time I would have changed the element being used to render the pokemon image from the default html image tag to the next.js inbuilt Image component. This is because the next.js inbuilt Image component is more optimized and offers better performance for adding images to websites and web apps.
 - With more time I would have improved the styling and desgin of the app as i currently had to do some very basic styling currently as styling was not the main focus for now.
+- With more time I intend to implement a useCallback hook to handle the fetching of pokemons when the `currentCount` state changes during pagination so as to improve performance adn control rerendering.
 
 <!-- Bult with -->
 ### Built With

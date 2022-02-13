@@ -1,2 +1,2 @@
 ### pokemon-explorer
-Check the Pull requests tabe to see the work done.
+Check the Pull requests tab to see the work done.

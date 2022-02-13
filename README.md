@@ -1,4 +1,5 @@
 ### pokemon-explorer
+Check the Pull requests tab to see the work done.
 
 <h1 align="center">pokemon-explorer</h1>
 

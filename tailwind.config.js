@@ -5,6 +5,8 @@ module.exports = {
       
       extend: {
         colors: {
+            pokyellow:"#FFCB08",
+            pokblue:"#3069B2"
         }
       },
   

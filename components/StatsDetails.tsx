@@ -1,19 +1,19 @@
 import React from 'react'
-import { IMove, IStats, IType } from 'interfaces/IPokemon'
+import { IStats } from 'interfaces/IPokemon'
 
 type DetailsListProps = {
-    header:string,
-    iterator: IMove[] | IStats[] | IType[]
+    header: string,
+    iterator: IStats[]
 }
 
-const DetailsList = ({ header, iterator }:DetailsListProps) => {
+const DetailsList = ({ header, iterator }: DetailsListProps) => {
     return (
         <div>
             <p><span className="font-bold underline text-lg">{header}</span> :</p>
             <div className="pl-4 mb-6">
                 {
                     iterator?.map(item => (
-                        <p key={item.move.name} >{item.move.name}</p>
+                        <p key={item.stat.name} >{item.stat.name} - {item.base_stat}</p>
                     ))
                 }
             </div>

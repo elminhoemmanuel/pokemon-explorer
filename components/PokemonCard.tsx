@@ -3,10 +3,12 @@ import { IPokemonsResult, IFetch, IPokemonDetails } from "../interfaces/IPokemon
 import axios from 'axios'
 import Loader from './Loader';
 import ErrorDisplay from './ErrorDisplay';
-import SecBtn from './SecBtn';
-import Image from 'next/image';
 import BasePokemonCard from './BasePokemonCard';
 import PokemonImage from './PokemonImage';
+import MovesDetails from "./MovesDetails"
+import TypesDetails from "./TypesDetails"
+import StatsDetails from "./StatsDetails"
+
 
 const PokemonCard = ({ name, url }: IPokemonsResult) => {
 
@@ -66,45 +68,22 @@ const PokemonCard = ({ name, url }: IPokemonsResult) => {
                 <BasePokemonCard name={name} url={url} getEachPokemon={getEachPokemon} fetchEach={fetchEach} ><div>{!fetchEach.loading && fetchEach.error && <ErrorDisplay error={fetchEach?.error} />}</div> </BasePokemonCard>
             }
 
-            {/* Pokemon Card when details have been fetched */}
+            {/* Pokemon Card when details have been loaded successfully */}
             {
                 !fetchEach.loading && !fetchEach.error && showMore &&
                 <BasePokemonCard name={name} url={url} getEachPokemon={getEachPokemon} fetchEach={fetchEach} >
-                    <div className="py-2">
                         <PokemonImage imgUrl={imgUrl} />
                         <div>
-                            {details?.species && <p><span className="font-bold underline text-lg  mb-6">Species</span> : {details.species.name}</p>}
+                            {details?.species && <p><span className="font-bold underline text-lg  mb-6">Species</span> : {details?.species.name}</p>}
 
-                            <p><span className="font-bold underline text-lg">Stats</span> :</p>
-                            <div className="pl-4 mb-6">
-                                {
-                                    details?.stats?.map(item => (
-                                        <p key={item.stat.name} >{item.stat.name} - {item.base_stat}</p>
-                                    ))
-                                }
-                            </div>
+                            { details?.stats && <StatsDetails header="Stats" iterator={details?.stats} /> }
 
-                            <p><span className="font-bold underline text-lg">Types</span> :</p>
-                            <div className="pl-4 mb-6">
-                                {
-                                    details?.types?.map(item => (
-                                        <p key={item.type.name} >{item.type.name}</p>
-                                    ))
-                                }
-                            </div>
+                            { details?.types && <TypesDetails header="Types" iterator={details?.types} /> }
 
-                            <p><span className="font-bold underline text-lg">Moves</span> :</p>
-                            <div className="pl-4 mb-6">
-                                {
-                                    details?.moves?.map(item => (
-                                        <p key={item.move.name} >{item.move.name}</p>
-                                    ))
-                                }
-                            </div>
+                            { details?.moves && <MovesDetails header="Moves" iterator={details?.moves} /> }
 
-                            <p><span className="font-bold underline text-lg mb-6">Weight</span> : {details?.weight}</p>
+                            { details?.weight && <p><span className="font-bold underline text-lg mb-6">Weight</span> : {details?.weight}</p> }
                         </div>
-                    </div>
                 </BasePokemonCard>
             }
 

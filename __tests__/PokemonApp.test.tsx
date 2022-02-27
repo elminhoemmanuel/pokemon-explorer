@@ -1,10 +1,10 @@
 import { render, screen } from '@testing-library/react'
-import PokemonList from '../components/PokemonList'
+import PokemonApp from '../components/PokemonApp'
 
-describe('PokemonList', () => {
+describe('PokemonApp', () => {
   it('renders a heading', () => {
 
-    render(<PokemonList />)
+    render(<PokemonApp />)
 
     const heading = screen.getByRole('heading')
 

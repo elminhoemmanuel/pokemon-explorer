@@ -60,3 +60,9 @@ export interface IPagination{
     nextPage:()=>void,
     prevPage:()=>void,
 }
+export interface ISearchParams{
+    name:string,
+    id:number,
+    loading:boolean,
+    error:string
+}

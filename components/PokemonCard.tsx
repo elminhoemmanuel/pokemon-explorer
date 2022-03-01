@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { IPokemonsResult, IFetch, IPokemonDetails } from "../interfaces/IPokemon"
 import axios from 'axios'
 import Loader from './Loader';
@@ -46,7 +46,10 @@ const PokemonCard = ({ name, url }: IPokemonsResult) => {
             });
     }
 
-
+    useEffect(() => {
+      
+    }, [])
+    
 
     return (
         <div>

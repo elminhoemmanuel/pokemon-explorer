@@ -13,10 +13,10 @@ type BasePokemonCardProps = {
 const BasePokemonCard = ({ name, url, getEachPokemon, fetchEach, children }:BasePokemonCardProps) => {
     return (
         <div className='text-sm w-full p-6 text-white font-bold  bg-pokyellow border-4 border-pokblue rounded-md'>
-            <p className="font-bold capitalize text-xl mb-2">{name}</p>
+            <p data-testid="pokemon-name" className="font-bold capitalize text-xl mb-2">{name}</p>
 
             <div className='my-3'>
-                <SecBtn onClick={() => { getEachPokemon(url) }}>{fetchEach?.loading ? <Loader color="white" /> : "Click to find out more"}</SecBtn>
+                <SecBtn data-testid="getPokemon-btn" onClick={() => { getEachPokemon(url) }}>{fetchEach?.loading ? <Loader color="white" /> : "Click to find out more"}</SecBtn>
             </div>
             {children}
         </div>

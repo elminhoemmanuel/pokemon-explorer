@@ -6,7 +6,7 @@ type ErrorDisplayProps = {
 
 const ErrorDisplay = ({ error }:ErrorDisplayProps) => {
   return (
-    <p className='text-red-500 text-center'>{error}</p>
+    <p data-testid="error-message" className='text-red-500 text-center'>{error}</p>
   )
 }
 

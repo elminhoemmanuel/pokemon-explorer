@@ -47,9 +47,9 @@ const PokemonCard = ({ name, url }: IPokemonsResult) => {
     }
 
     useEffect(() => {
-      
+
     }, [])
-    
+
 
     return (
         <div>
@@ -75,18 +75,20 @@ const PokemonCard = ({ name, url }: IPokemonsResult) => {
             {
                 !fetchEach.loading && !fetchEach.error && showMore &&
                 <BasePokemonCard name={name} url={url} getEachPokemon={getEachPokemon} fetchEach={fetchEach} >
+                    <div>
                         <PokemonImage imgUrl={imgUrl} />
                         <div>
-                            {details?.species && <p><span className="font-bold underline text-lg  mb-6">Species</span> : {details?.species.name}</p>}
+                            {details?.species && <p data-testid="pokemon-species"><span className="font-bold underline text-lg  mb-6">Species</span> : {details?.species.name}</p>}
 
-                            { details?.stats && <StatsDetails header="Stats" iterator={details?.stats} /> }
+                            {details?.stats && <StatsDetails header="Stats" iterator={details?.stats} />}
 
-                            { details?.types && <TypesDetails header="Types" iterator={details?.types} /> }
+                            {details?.types && <TypesDetails header="Types" iterator={details?.types} />}
 
-                            { details?.moves && <MovesDetails header="Moves" iterator={details?.moves} /> }
+                            {details?.moves && <MovesDetails header="Moves" iterator={details?.moves} />}
 
-                            { details?.weight && <p><span className="font-bold underline text-lg mb-6">Weight</span> : {details?.weight}</p> }
+                            {details?.weight && <p><span className="font-bold underline text-lg mb-6">Weight</span> : {details?.weight}</p>}
                         </div>
+                    </div>
                 </BasePokemonCard>
             }
 

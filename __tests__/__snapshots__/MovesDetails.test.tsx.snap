@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`On render, check that moves is displayed correctly 1`] = `
+<div>
+  <p>
+    <span
+      class="font-bold underline text-lg"
+    >
+      Moves
+    </span>
+     :
+  </p>
+  <div
+    class="pl-4 mb-6"
+    data-testid="moves-container"
+  >
+    <p>
+      razor-wind
+    </p>
+  </div>
+</div>
+`;
+
+exports[`On render, check that stats is displayed correctly 1`] = `
+<div>
+  <p>
+    <span
+      class="font-bold underline text-lg"
+    >
+      Stats
+    </span>
+     :
+  </p>
+  <div
+    class="pl-4 mb-6"
+    data-testid="stats-container"
+  >
+    <p>
+      hp
+       - 
+      45
+    </p>
+    <p>
+      attack
+       - 
+      49
+    </p>
+  </div>
+</div>
+`;

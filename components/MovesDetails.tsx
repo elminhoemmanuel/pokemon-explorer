@@ -10,7 +10,7 @@ const MovesList = ({ header, iterator }:MovesListProps) => {
     return (
         <div>
             <p><span className="font-bold underline text-lg">{header}</span> :</p>
-            <div className="pl-4 mb-6">
+            <div data-testid="moves-container" className="pl-4 mb-6">
                 {
                     iterator?.map(item => (
                         <p key={item.move.name} >{item.move.name}</p>

@@ -10,10 +10,10 @@ const DetailsList = ({ header, iterator }: DetailsListProps) => {
     return (
         <div>
             <p><span className="font-bold underline text-lg">{header}</span> :</p>
-            <div className="pl-4 mb-6">
+            <div data-testid="stats-container" className="pl-4 mb-6">
                 {
-                    iterator?.map(item => (
-                        <p key={item.stat.name} >{item.stat.name} - {item.base_stat}</p>
+                    iterator?.map((item, x) => (
+                        <p  key={item.stat.name} >{item.stat.name} - {item.base_stat}</p>
                     ))
                 }
             </div>

@@ -18,7 +18,7 @@ const Navbar = ({ handleSearchText }: NavbarProps) => {
         <nav className='mt-4 mb-10 flex flex-col md:flex-row md:items-center md:justify-between'>
             <div><h1 className="font-bold text-xl text-white mb-3 md:mb-0">List of Pokemons</h1></div>
             <div>
-                <Input value={text} onChange={(e) => setText(e.target.value)} />
+                <Input data-testid="search-input" value={text} onChange={(e) => setText(e.target.value)} />
             </div>
         </nav>
     )

@@ -33,7 +33,7 @@ Some noteworthy information about the key decisions I took during this project a
 - I decided to make use of the  useCallback hook to handle the fetching of pokemons when the `currentCount` state changes during pagination so as to improve performance and control rerendering 
 
 <!-- Improvements -->
-## Further improvements if I had more time
+## Further improvements 
 Some further improvements which are still possible on this project include;
 
 - Writing some more test cases even though I have been able to write quite a good number of unit tests already.
